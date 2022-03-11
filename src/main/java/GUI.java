@@ -42,7 +42,6 @@ public class GUI {
         addButton.setText("Add!");
         addButton.addActionListener(e -> {
             String text = textField.getText();
-            System.out.println(text);
             if (!text.equals("")) {
                 smartNotes.addNote(text);
                 list.setListData(smartNotes.notes.toArray());

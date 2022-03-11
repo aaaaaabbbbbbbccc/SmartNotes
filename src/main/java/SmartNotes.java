@@ -4,15 +4,12 @@ import java.util.List;
 public class SmartNotes {
 
     List<SmartNotePair> notes;
-    private int numberOfNotes;
 
     public SmartNotes() {
         notes = new ArrayList<>();
-        numberOfNotes = 0;
     }
 
     public void addNote(String text) {
-        ++numberOfNotes;
         SmartNotePair smartNotePair = new SmartNotePair();
         smartNotePair.setText(text);
         notes.add(smartNotePair);
@@ -34,13 +31,5 @@ public class SmartNotes {
         }
 
         return notes.get(index);
-    }
-
-    public void displayAllNotes() {
-        System.out.println(notes);
-    }
-
-    public int getNumberOfNotes() {
-        return numberOfNotes;
     }
 }
