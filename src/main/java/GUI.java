@@ -36,7 +36,6 @@ public class GUI {
         });
         panel.add(copyButton);
 
-
         panel.add(textField);
 
         addButton.setText("Add!");
