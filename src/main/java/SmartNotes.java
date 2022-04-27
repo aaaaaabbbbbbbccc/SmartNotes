@@ -17,14 +17,14 @@ public class SmartNotes {
 
     public SmartNotePair getNote(int index) {
         String noteText = notes.get(index).getText();
-        int readNoteUsageCount = notes.get(index).getUsageCount();
+        int noteUsageCount = notes.get(index).getUsageCount();
 
         for (int i = index - 1; i >= 0; --i) {
             int frontNoteUsageCount = notes.get(i).getUsageCount();
-            if (frontNoteUsageCount < readNoteUsageCount) {
+            if (frontNoteUsageCount < noteUsageCount) {
                 String frontNoteText = notes.get(i).getText();
                 notes.get(i).setText(noteText);
-                notes.get(i).setUsageCount(readNoteUsageCount);
+                notes.get(i).setUsageCount(noteUsageCount);
                 notes.get(i + 1).setText(frontNoteText);
                 notes.get(i + 1).setUsageCount(frontNoteUsageCount);
             }
