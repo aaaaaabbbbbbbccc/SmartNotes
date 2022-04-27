@@ -14,6 +14,8 @@ public class GUI {
     private JList list;
 
     public GUI(SmartNotes smartNotes) {
+        panel.setPreferredSize(new Dimension(1200, 400));
+
         panel.setLayout(new GridLayout(5, 1));
 
         label.setText("Smart Notes");
@@ -50,7 +52,6 @@ public class GUI {
         panel.add(addButton);
 
         JFrame frame = new JFrame();
-        frame.setAlwaysOnTop(true);
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Smart Notes");
