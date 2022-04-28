@@ -18,8 +18,8 @@ public class SmartNotePair {
         return text + " / " + usageCount;
     }
 
-    public void setText(String note) {
-        this.text = note;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public int getUsageCount() {

@@ -30,7 +30,7 @@ public class GUI {
             if (index == -1) {
                 return;
             }
-            String selectedElement = smartNotes.getNote(index).toString().split(" / ")[0];
+            String selectedElement = smartNotes.getNote(index).getText()/*.toString().split(" / ")[0]*/;
             StringSelection stringSelection = new StringSelection(selectedElement);
             Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
             clipboard.setContents(stringSelection, null);
